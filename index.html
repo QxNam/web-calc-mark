@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    <py-env>
+        - numpy
+        - matplotlib
+        - pandas
+    </py-env>
+</head>
+<body>
+    <div id="title"><center>
+    <table >
+        <tr>
+            <td><img src="myicon.png" alt="icon" class="sym"/></td>
+            <td><h1 class="text-title" style="color: rgb(42, 248, 42);">Công cụ tính điểm học tập IUH</h1></td>
+        </tr>
+    </table></center>
+    </div>
+
+    <div id="layout-col">
+        <div class="col ds" style="display: flex;">
+            <div class="ds" style="width: 70%; text-align: center;">
+                <table id="msgs" class="table-ds">
+                    <tr>
+                        <th>Stt</th>
+                        <th>Môn học</th>
+                        <th>Điểm</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="info" style="width: 30%;">
+                <h1 style="margin-top: 20px; font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif;">Điểm trung bình</h1>
+                <p id="outtb" style="margin-left: 20px; margin-right: 20px; height: 55px; background-color: rgb(133, 246, 250); font-size: 35px; font-family: 'Lucida Sans';"></p><br>
+                <p id="complain"></p>
+            </div>
+        </div>
+        <center>
+        <div class="col calc" id = "lay2">
+        
+        <form name="diem">
+            <table>
+                <tr>
+                    <td>
+                        <label><b>Số tín chỉ</b></label>
+                    </td>
+                    <td>
+                        <input class="in" id = "tc" type="number" style="width: 50px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Điểm thường kì</b></label>
+                    </td>
+                    <td>
+                        <input class="in" id = "tk1" type="number" style="width: 50px"/>
+                    </td>
+                    <td>
+                        <input class="in" id = "tk2" type="number" style="width: 50px"/>
+                    </td>
+                    <td>
+                        <input class="in" id = "tk3" type="number" style="width: 50px"/>
+                    </td>
+                    <td>
+                        <input class="in" id = "tk4" type="number" style="width: 50px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Điểm thực hành</b></label>
+                    </td>
+                    <td>
+                        <input class="in" id = "th1" type="number" style="width: 50px"/>
+                    </td>
+                    <td>
+                        <input class="in" id = "th2" type="number" style="width: 50px"/>
+                    </td>
+                    <td>
+                        <input class="in" id = "th3" type="number" style="width: 50px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Điểm giữa kỳ</b></label>
+                    </td>
+                    <td>
+                        <input class="in" id = "gk" type="number" style="width: 50px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Điểm cuối kỳ</b></label>
+                    </td>
+                    <td>
+                        <input class="in" id = "ck" type="number" style="width: 50px"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+        <py-button class="button" id="result" label="Kết quả" type="button" pys-onClick="res"></py-button>
+        <div class="output">
+            <div>
+                <p id="out1" class="out"></p>
+                <p id="out2" class="out"></p>
+                <p id="out3" class="out"></p>
+                <p id="out4" class="out"></p>
+            </div>
+            <input type="text" name="subject" id="subject" style="width: 230px; height: 35px" placeholder="Nhập tên môn học để thêm"/>
+            <py-button id="add" label="Thêm" type="button" pys-onClick="danhsach"></py-button>
+        </div>
+        </div></center>
+        <div id="graph" class="col draw" style="width:100%">
+            
+        </div>
+
+    </div>
+     
+    <audio controls autoplay> 
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+    <py-script src="oop.py" output="graph"></py-script>
+    <!-- <py-script output='graph'>
+        import matplotlib.pyplot as plt
+        fig = plt.figure(figsize = (10, 5))
+
+        plt.bar(['a'], [10], color ='maroon')
+
+        plt.xlabel("Môn học")
+        plt.ylabel("Điểm")
+        plt.title("Biểu đồ học tập của bạn")
+        plt
+    </py-script> -->
+</body>
+</html>

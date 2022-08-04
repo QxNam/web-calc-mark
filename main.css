@@ -1,0 +1,93 @@
+body {
+    background-image: url('gif/neon.gif');
+}
+
+
+.out{
+    width: 500px;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(37, 184, 0, 0.986);
+    background-color: beige;
+    margin-top: 10px;
+    text-align: center;
+}
+.output{
+    height: 210px;
+}
+#title{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-image: url('gif/win.gif');
+    margin-bottom: 10px;
+    
+}
+.sym{
+    max-width: 100px;
+    height: auto;
+}
+#layout-col{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.col{
+    flex: 1;
+}
+.calc{
+    background-color: rgb(255, 215, 107);
+    border-radius: 10px;
+}
+.draw{
+    background-color: rgb(255, 199, 255);
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.ds{
+    background-color: aqua;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.table-ds{
+    width: 100%;
+}
+.info{
+    background-color: rgb(216, 233, 248);
+    width: 35%;
+    text-align: center;
+    font-style: initial;
+    font-weight: 4;
+}
+#lay2{
+    justify-content: center;
+}
+#result{
+    width: 300px;
+    font-size: 25px;
+    padding: 0;
+    color: rgb(202, 11, 219);
+    background-color: antiquewhite;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#result:hover{
+    opacity: 0.5;
+}
+
+#add{
+    width: 100px;
+    height: inherit;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(250, 137, 137);
+}
+#add:hover{
+    opacity: 0.5;
+}
+tr:hover{
+    background-color:#ddd;
+    cursor:pointer;
+}
